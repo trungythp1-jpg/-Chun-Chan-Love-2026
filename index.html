@@ -14,7 +14,8 @@ body{
   color:white;
   background:
     radial-gradient(circle at 50% 20%,#5b1428 0%,#210711 38%,#080308 100%);
-  overflow:hidden;
+  overflow-x:hidden;
+overflow-y:auto;
 }
 
 body:before{
@@ -26,18 +27,18 @@ body:before{
 }
 
 .container{
-  min-height:100vh;
+  min-height:100svh;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:25px;
+  padding:25px 25px 100px;
   position:relative;
   z-index:2;
 }
 
 .card{
   width:min(440px,100%);
-  padding:42px 25px 35px;
+  padding:42px 25px 45px;
   text-align:center;
   border:1px solid rgba(255,255,255,.16);
   border-radius:32px;
