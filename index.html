@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+
 <meta charset="UTF-8">
 
 <meta name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
 <title>Chun ❤️ Chan</title>
 
 <style>
 
 /* =========================
-   CƠ BẢN
+   RESET
 ========================= */
 
 *{
@@ -21,29 +22,29 @@
 }
 
 html{
-  min-height:100%;
   background:#080308;
 }
 
 body{
+
   min-height:100vh;
   min-height:100svh;
 
   font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  sans-serif;
 
   color:white;
 
   background:
-    radial-gradient(
-      circle at 50% 20%,
-      #5b1428 0%,
-      #210711 38%,
-      #080308 100%
-    );
+  radial-gradient(
+    circle at 50% 15%,
+    #64172d 0%,
+    #260914 38%,
+    #080308 100%
+  );
 
   overflow-x:hidden;
   overflow-y:auto;
@@ -52,28 +53,33 @@ body{
 }
 
 
-/* Lớp tối nhẹ */
+/* =========================
+   LỚP TỐI
+========================= */
 
 body::before{
+
   content:"";
 
   position:fixed;
+
   inset:0;
 
   background:
-    radial-gradient(
-      circle at center,
-      transparent 20%,
-      rgba(0,0,0,.55)
-    );
+  radial-gradient(
+    circle at center,
+    transparent 15%,
+    rgba(0,0,0,.58)
+  );
 
   pointer-events:none;
+
   z-index:0;
 }
 
 
 /* =========================
-   KHUNG CHÍNH
+   CONTAINER
 ========================= */
 
 .container{
@@ -82,13 +88,13 @@ body::before{
 
   display:flex;
 
-  align-items:center;
   justify-content:center;
+  align-items:center;
 
   padding:
-    24px
-    18px
-    calc(100px + env(safe-area-inset-bottom));
+  24px
+  18px
+  calc(100px + env(safe-area-inset-bottom));
 
   position:relative;
 
@@ -105,47 +111,47 @@ body::before{
   width:min(440px,100%);
 
   padding:
-    38px
-    22px
-    42px;
+  36px
+  22px
+  40px;
 
   text-align:center;
 
   border:
-    1px solid
-    rgba(255,255,255,.16);
+  1px solid
+  rgba(255,255,255,.16);
 
   border-radius:32px;
 
   background:
-    rgba(255,255,255,.075);
+  rgba(255,255,255,.075);
 
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
 
   box-shadow:
-    0 25px 80px
-    rgba(0,0,0,.55);
+  0 25px 80px
+  rgba(0,0,0,.58);
 }
 
 
 /* =========================
-   TRÁI TIM
+   HEART
 ========================= */
 
 .heart{
 
-  font-size:58px;
+  font-size:56px;
 
   margin-bottom:12px;
 
   animation:
-    pulse 1.8s infinite;
+  pulse 1.8s infinite;
 }
 
 
 /* =========================
-   TIÊU ĐỀ
+   TITLE
 ========================= */
 
 h1{
@@ -154,38 +160,37 @@ h1{
 
   letter-spacing:2px;
 
-  margin-bottom:10px;
+  margin-bottom:8px;
 }
-
 
 .subtitle{
 
-  color:#f6cbd5;
+  color:#f5c8d2;
 
   font-size:16px;
 
-  margin-bottom:32px;
+  margin-bottom:30px;
 }
 
 
 /* =========================
-   NGÀY BẮT ĐẦU
+   DATE
 ========================= */
 
 .date{
 
-  font-size:14px;
-
   color:#dca9b5;
 
-  margin-bottom:15px;
+  font-size:13px;
 
   letter-spacing:2px;
+
+  margin-bottom:16px;
 }
 
 
 /* =========================
-   TỔNG SỐ NGÀY
+   DAYS
 ========================= */
 
 .days{
@@ -197,12 +202,12 @@ h1{
   line-height:1;
 
   background:
-    linear-gradient(
-      90deg,
-      #fff,
-      #ff9db2,
-      #fff
-    );
+  linear-gradient(
+    90deg,
+    #ffffff,
+    #ff9db2,
+    #ffffff
+  );
 
   -webkit-background-clip:text;
 
@@ -211,19 +216,20 @@ h1{
   color:transparent;
 }
 
-
 .label{
 
   margin-top:9px;
 
   color:#e8bdc7;
 
-  font-size:14px;
+  font-size:13px;
+
+  letter-spacing:.5px;
 }
 
 
 /* =========================
-   THỜI GIAN
+   TIME
 ========================= */
 
 .time{
@@ -231,28 +237,26 @@ h1{
   display:grid;
 
   grid-template-columns:
-    repeat(4,1fr);
+  repeat(4,1fr);
 
   gap:8px;
 
-  margin:28px 0;
+  margin:27px 0;
 }
-
 
 .box{
 
-  padding:14px 5px;
+  padding:13px 4px;
 
   border-radius:17px;
 
   background:
-    rgba(255,255,255,.08);
+  rgba(255,255,255,.08);
 
   border:
-    1px solid
-    rgba(255,255,255,.09);
+  1px solid
+  rgba(255,255,255,.09);
 }
-
 
 .number{
 
@@ -261,19 +265,18 @@ h1{
   font-weight:700;
 }
 
-
 .small{
 
-  font-size:11px;
+  font-size:10px;
 
   color:#dca9b5;
 
-  margin-top:3px;
+  margin-top:4px;
 }
 
 
 /* =========================
-   LỜI NHẮN
+   QUOTE
 ========================= */
 
 .quote{
@@ -289,62 +292,62 @@ h1{
 
 
 /* =========================
-   NHẠC
+   MUSIC
 ========================= */
 
 .music{
 
-  margin-top:24px;
+  margin-top:25px;
 
-  text-align:center;
+  padding-top:20px;
+
+  border-top:
+  1px solid
+  rgba(255,255,255,.10);
 }
 
-
-.music button{
-
-  border:
-    1px solid
-    rgba(255,255,255,.18);
-
-  background:
-    rgba(255,255,255,.09);
-
-  color:white;
-
-  padding:
-    12px 20px;
-
-  border-radius:999px;
+.music-title{
 
   font-size:13px;
 
-  letter-spacing:.4px;
+  color:#f4cbd4;
 
-  cursor:pointer;
+  margin-bottom:12px;
 
-  -webkit-tap-highlight-color:transparent;
-
-  transition:
-    transform .15s ease,
-    background .2s ease;
+  letter-spacing:.5px;
 }
 
 
-.music button:active{
+/*
+  YouTube player
+*/
 
-  transform:scale(.96);
+.youtube{
+
+  width:100%;
+
+  aspect-ratio:16 / 9;
+
+  overflow:hidden;
+
+  border-radius:18px;
+
+  background:#000;
+
+  box-shadow:
+  0 12px 35px
+  rgba(0,0,0,.35);
 }
 
+.youtube iframe{
 
-.music-status{
+  width:100%;
 
-  margin-top:8px;
+  height:100%;
 
-  font-size:11px;
+  border:0;
 
-  color:#c994a1;
-
-  letter-spacing:.3px;
+  display:block;
 }
 
 
@@ -354,9 +357,9 @@ h1{
 
 .footer{
 
-  margin-top:25px;
+  margin-top:22px;
 
-  font-size:12px;
+  font-size:11px;
 
   color:#b9828e;
 
@@ -365,29 +368,7 @@ h1{
 
 
 /* =========================
-   YOUTUBE PLAYER ẨN
-========================= */
-
-#musicFrame{
-
-  position:fixed;
-
-  width:1px;
-  height:1px;
-
-  left:-10px;
-  bottom:-10px;
-
-  opacity:.01;
-
-  pointer-events:none;
-
-  border:0;
-}
-
-
-/* =========================
-   TIM BAY
+   FLOATING HEARTS
 ========================= */
 
 .floating{
@@ -399,7 +380,7 @@ h1{
   font-size:20px;
 
   animation:
-    float 7s linear infinite;
+  float 7s linear infinite;
 
   opacity:.7;
 
@@ -425,14 +406,13 @@ h1{
 
 }
 
-
 @keyframes float{
 
   from{
 
     transform:
-      translateY(0)
-      rotate(0deg);
+    translateY(0)
+    rotate(0deg);
 
     opacity:0;
   }
@@ -444,8 +424,8 @@ h1{
   to{
 
     transform:
-      translateY(-110vh)
-      rotate(360deg);
+    translateY(-110vh)
+    rotate(360deg);
 
     opacity:0;
   }
@@ -454,7 +434,7 @@ h1{
 
 
 /* =========================
-   TỐI ƯU IPHONE
+   IPHONE
 ========================= */
 
 @media(max-width:480px){
@@ -463,99 +443,95 @@ h1{
 
     align-items:flex-start;
 
-    padding-top:22px;
+    padding-top:18px;
 
     padding-bottom:
-      calc(
-        110px +
-        env(safe-area-inset-bottom)
-      );
+    calc(
+      100px +
+      env(safe-area-inset-bottom)
+    );
   }
-
 
   .card{
 
-    margin-bottom:20px;
-
     padding:
-      34px
-      20px
-      40px;
-  }
+    30px
+    19px
+    36px;
 
+    border-radius:30px;
+  }
 
   .heart{
 
-    font-size:52px;
+    font-size:50px;
   }
-
 
   h1{
 
-    font-size:38px;
+    font-size:37px;
   }
-
 
   .days{
 
-    font-size:50px;
+    font-size:49px;
+  }
+
+  .time{
+
+    gap:6px;
+  }
+
+  .box{
+
+    padding:11px 3px;
+  }
+
+  .number{
+
+    font-size:20px;
   }
 
 }
 
 
 /* =========================
-   MÀN HÌNH RẤT THẤP
+   IPHONE MÀN HÌNH THẤP
 ========================= */
 
 @media(max-width:480px) and (max-height:700px){
 
-  .container{
-
-    padding-top:15px;
-  }
-
-
   .card{
 
-    padding-top:28px;
+    padding-top:25px;
   }
-
 
   .heart{
 
-    font-size:46px;
+    font-size:44px;
 
-    margin-bottom:8px;
+    margin-bottom:7px;
   }
-
 
   h1{
 
-    font-size:34px;
+    font-size:33px;
   }
-
 
   .subtitle{
 
-    margin-bottom:24px;
+    margin-bottom:22px;
   }
-
 
   .time{
 
-    margin:22px 0;
-  }
-
-
-  .box{
-
-    padding:11px 4px;
+    margin:20px 0;
   }
 
 }
 
 </style>
+
 </head>
 
 
@@ -563,245 +539,243 @@ h1{
 
 
 <!-- =========================
-     NỘI DUNG
+     MAIN
 ========================= -->
 
 <div class="container">
 
-  <div class="card">
+<div class="card">
 
 
-    <!-- TRÁI TIM -->
+  <!-- HEART -->
 
-    <div class="heart">
-      ❤️
-    </div>
-
-
-    <!-- TIÊU ĐỀ -->
-
-    <h1>
-      Chun ❤️ Chan
-    </h1>
+  <div class="heart">
+    ❤️
+  </div>
 
 
-    <div class="subtitle">
-      Câu chuyện của chúng ta
-    </div>
+  <!-- TITLE -->
+
+  <h1>
+    Chun ❤️ Chan
+  </h1>
+
+  <div class="subtitle">
+    Câu chuyện của chúng ta
+  </div>
 
 
-    <!-- NGÀY BẮT ĐẦU -->
+  <!-- DATE -->
 
-    <div class="date">
-      BẮT ĐẦU TỪ 05 • 12 • 2022
-    </div>
-
-
-    <!-- TỔNG NGÀY -->
-
-    <div
-      class="days"
-      id="days"
-    >
-      0
-    </div>
+  <div class="date">
+    BẮT ĐẦU TỪ 05 • 12 • 2022
+  </div>
 
 
-    <div class="label">
-      NGÀY BÊN NHAU
-    </div>
+  <!-- DAYS -->
+
+  <div
+  class="days"
+  id="days">
+    0
+  </div>
+
+  <div class="label">
+    NGÀY BÊN NHAU
+  </div>
 
 
-    <!-- THỜI GIAN -->
+  <!-- TIME -->
 
-    <div class="time">
-
-
-      <div class="box">
-
-        <div
-          class="number"
-          id="years"
-        >
-          0
-        </div>
-
-        <div class="small">
-          NĂM
-        </div>
-
-      </div>
+  <div class="time">
 
 
-      <div class="box">
-
-        <div
-          class="number"
-          id="months"
-        >
-          0
-        </div>
-
-        <div class="small">
-          THÁNG
-        </div>
-
-      </div>
-
-
-      <div class="box">
-
-        <div
-          class="number"
-          id="hours"
-        >
-          0
-        </div>
-
-        <div class="small">
-          GIỜ
-        </div>
-
-      </div>
-
-
-      <div class="box">
-
-        <div
-          class="number"
-          id="minutes"
-        >
-          0
-        </div>
-
-        <div class="small">
-          PHÚT
-        </div>
-
-      </div>
-
-
-    </div>
-
-
-    <!-- LỜI NHẮN -->
-
-    <div class="quote">
-
-      “Mỗi ngày bên em đều là một ngày đáng nhớ.
-      Và anh muốn câu chuyện này kéo dài mãi mãi.” ❤️
-
-    </div>
-
-
-    <!-- =========================
-         NHẠC YOUTUBE
-    ========================== -->
-
-    <div class="music">
-
-      <button
-        id="musicBtn"
-        onclick="toggleMusic()"
-      >
-        🎵 Bật nhạc của chúng ta
-      </button>
-
+    <div class="box">
 
       <div
-        class="music-status"
-        id="musicStatus"
-      >
-        ĐẾN KHI NÀO • YouTube ❤️
+      class="number"
+      id="years">
+        0
+      </div>
+
+      <div class="small">
+        NĂM
       </div>
 
     </div>
 
 
-    <!-- FOOTER -->
+    <div class="box">
 
-    <div class="footer">
+      <div
+      class="number"
+      id="months">
+        0
+      </div>
 
-      CHUN ❤️ CHAN • MÃI MÃI
+      <div class="small">
+        THÁNG
+      </div>
+
+    </div>
+
+
+    <div class="box">
+
+      <div
+      class="number"
+      id="hours">
+        0
+      </div>
+
+      <div class="small">
+        GIỜ
+      </div>
+
+    </div>
+
+
+    <div class="box">
+
+      <div
+      class="number"
+      id="minutes">
+        0
+      </div>
+
+      <div class="small">
+        PHÚT
+      </div>
 
     </div>
 
 
   </div>
 
+
+  <!-- QUOTE -->
+
+  <div class="quote">
+
+    “Mỗi ngày bên em đều là một ngày đáng nhớ.
+    Và anh muốn câu chuyện này kéo dài mãi mãi.” ❤️
+
+  </div>
+
+
+  <!-- =========================
+       YOUTUBE MUSIC
+  ========================== -->
+
+  <div class="music">
+
+    <div class="music-title">
+      🎵 Bài hát của chúng ta
+    </div>
+
+
+    <div class="youtube">
+
+      <iframe
+
+        src="https://www.youtube.com/embed/QCr4Wf_eJHo?rel=0"
+
+        title="Chun ❤️ Chan - Đến Khi Nào"
+
+        allow="
+          accelerometer;
+          autoplay;
+          clipboard-write;
+          encrypted-media;
+          gyroscope;
+          picture-in-picture;
+          web-share
+        "
+
+        allowfullscreen>
+
+      </iframe>
+
+    </div>
+
+  </div>
+
+
+  <!-- FOOTER -->
+
+  <div class="footer">
+    CHUN ❤️ CHAN • MÃI MÃI
+  </div>
+
+
+</div>
+
 </div>
 
 
 <!-- =========================
-     YOUTUBE
+     FLOATING HEARTS
 ========================= -->
-
-<iframe
-  id="musicFrame"
-  allow="autoplay; encrypted-media"
-  title="Chun Chan Music">
-</iframe>
-
 
 <script>
 
+
 /* =========================
-   NGÀY BẮT ĐẦU
+   LOVE TIMER
 ========================= */
 
 const start =
-  new Date(
-    2022,
-    11,
-    5,
-    0,
-    0,
-    0
-  );
+new Date(
+  2022,
+  11,
+  5,
+  0,
+  0,
+  0
+);
 
-
-/* =========================
-   CẬP NHẬT THỜI GIAN
-========================= */
 
 function update(){
 
   const now =
-    new Date();
+  new Date();
 
 
   const diff =
-    now - start;
+  now - start;
 
 
   const totalDays =
-    Math.floor(
-      diff / 86400000
-    );
+  Math.floor(
+    diff /
+    86400000
+  );
 
 
   const totalHours =
-    Math.floor(
-      diff / 3600000
-    );
+  Math.floor(
+    diff /
+    3600000
+  );
 
 
   const totalMinutes =
-    Math.floor(
-      diff / 60000
-    );
+  Math.floor(
+    diff /
+    60000
+  );
 
 
   let years =
-    now.getFullYear()
-    -
-    start.getFullYear();
+  now.getFullYear()
+  -
+  start.getFullYear();
 
 
   let months =
-    now.getMonth()
-    -
-    start.getMonth();
+  now.getMonth()
+  -
+  start.getMonth();
 
 
   if(
@@ -825,33 +799,33 @@ function update(){
 
 
   document
-    .getElementById("days")
-    .textContent =
-    totalDays.toLocaleString("vi-VN");
+  .getElementById("days")
+  .textContent =
+  totalDays.toLocaleString("vi-VN");
 
 
   document
-    .getElementById("years")
-    .textContent =
-    years;
+  .getElementById("years")
+  .textContent =
+  years;
 
 
   document
-    .getElementById("months")
-    .textContent =
-    months;
+  .getElementById("months")
+  .textContent =
+  months;
 
 
   document
-    .getElementById("hours")
-    .textContent =
-    totalHours % 24;
+  .getElementById("hours")
+  .textContent =
+  totalHours % 24;
 
 
   document
-    .getElementById("minutes")
-    .textContent =
-    totalMinutes % 60;
+  .getElementById("minutes")
+  .textContent =
+  totalMinutes % 60;
 
 }
 
@@ -866,74 +840,75 @@ setInterval(
 
 
 /* =========================
-   TIM BAY
+   FLOATING HEARTS
 ========================= */
 
 function heart(){
 
   const h =
-    document.createElement("div");
+  document.createElement("div");
 
 
   h.className =
-    "floating";
+  "floating";
 
 
-  const hearts =
-    [
-      "❤️",
-      "💕",
-      "💗",
-      "💖",
-      "💘"
-    ];
+  const hearts = [
+
+    "❤️",
+    "💕",
+    "💗",
+    "💖",
+    "💘"
+
+  ];
 
 
   h.textContent =
-    hearts[
-      Math.floor(
-        Math.random()
-        *
-        hearts.length
-      )
-    ];
+  hearts[
+    Math.floor(
+      Math.random()
+      *
+      hearts.length
+    )
+  ];
 
 
   h.style.left =
-    Math.random()
-    *
-    100
-    +
-    "vw";
+  Math.random()
+  *
+  100
+  +
+  "vw";
 
 
   h.style.animationDuration =
-    (
-      5
-      +
-      Math.random()
-      *
-      5
-    )
+  (
+    5
     +
-    "s";
+    Math.random()
+    *
+    5
+  )
+  +
+  "s";
 
 
   h.style.fontSize =
-    (
-      15
-      +
-      Math.random()
-      *
-      18
-    )
+  (
+    15
     +
-    "px";
+    Math.random()
+    *
+    18
+  )
+  +
+  "px";
 
 
   document
-    .body
-    .appendChild(h);
+  .body
+  .appendChild(h);
 
 
   setTimeout(
@@ -948,80 +923,6 @@ setInterval(
   heart,
   700
 );
-
-
-/* =========================
-   NHẠC YOUTUBE
-========================= */
-
-let musicPlaying =
-  false;
-
-
-function toggleMusic(){
-
-  const frame =
-    document.getElementById(
-      "musicFrame"
-    );
-
-
-  const button =
-    document.getElementById(
-      "musicBtn"
-    );
-
-
-  const status =
-    document.getElementById(
-      "musicStatus"
-    );
-
-
-  if(!musicPlaying){
-
-    /*
-      Bài hát YouTube:
-      https://youtu.be/QCr4Wf_eJHo
-    */
-
-    frame.src =
-      "https://www.youtube.com/embed/QCr4Wf_eJHo?autoplay=1&playsinline=1&rel=0&loop=1&playlist=QCr4Wf_eJHo";
-
-
-    musicPlaying =
-      true;
-
-
-    button.textContent =
-      "🔇 Tắt nhạc";
-
-
-    status.textContent =
-      "ĐANG PHÁT • ĐẾN KHI NÀO ❤️";
-
-
-  }else{
-
-
-    frame.src =
-      "";
-
-
-    musicPlaying =
-      false;
-
-
-    button.textContent =
-      "🎵 Bật nhạc của chúng ta";
-
-
-    status.textContent =
-      "ĐẾN KHI NÀO • YouTube ❤️";
-
-  }
-
-}
 
 </script>
 
