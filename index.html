@@ -4,7 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chun ❤️ Chan</title>
+/* 🎵 Nút nhạc Chun ❤️ Chan */
 
+.music{
+  margin-top:22px;
+  text-align:center;
+}
+
+.music button{
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.09);
+  color:#fff;
+  padding:11px 18px;
+  border-radius:999px;
+  font-size:13px;
+  letter-spacing:.5px;
+  cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.music button:active{
+  transform:scale(.97);
+}
+
+#musicStatus{
+  margin-top:8px;
+  font-size:11px;
+  color:#c994a1;
+}
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 
@@ -15,6 +42,7 @@ body{
   background:
     radial-gradient(circle at 50% 20%,#5b1428 0%,#210711 38%,#080308 100%);
   overflow-x:hidden;
+overflow-y:auto;
 overflow-y:auto;
 }
 
@@ -31,7 +59,7 @@ body:before{
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:25px 25px 100px;
+  padding:24px 18px calc(100px + env(safe-area-inset-bottom));
   position:relative;
   z-index:2;
 }
@@ -194,7 +222,25 @@ h1{
       “Mỗi ngày bên em đều là một ngày đáng nhớ.
       Và anh muốn câu chuyện này kéo dài mãi mãi.” ❤️
     </div>
+<!-- 🎵 NHẠC CHUN ❤️ CHAN -->
+<div class="music">
+  <button id="musicBtn" onclick="toggleMusic()">
+    🎵 Bật nhạc của chúng ta
+  </button>
 
+  <div id="musicStatus">
+    ĐẾN KHI NÀO • YouTube ❤️
+  </div>
+</div>
+
+<iframe
+  id="musicFrame"
+  width="1"
+  height="1"
+  style="position:fixed;left:-10px;bottom:-10px;opacity:0.01;pointer-events:none;"
+  allow="autoplay; encrypted-media"
+  title="Chun Chan Music">
+</iframe>
     <div class="footer">
       CHUN ❤️ CHAN • MÃI MÃI
     </div>
@@ -249,6 +295,34 @@ function heart(){
 }
 
 setInterval(heart,700);
+let musicPlaying = false;
+
+function toggleMusic() {
+  const frame = document.getElementById("musicFrame");
+  const btn = document.getElementById("musicBtn");
+  const status = document.getElementById("musicStatus");
+
+  if (!musicPlaying) {
+
+    frame.src =
+      "https://www.youtube.com/embed/QCr4Wf_eJHo?autoplay=1&playsinline=1&rel=0&loop=1&playlist=QCr4Wf_eJHo";
+
+    musicPlaying = true;
+
+    btn.textContent = "🔇 Tắt nhạc";
+    status.textContent = "ĐANG PHÁT • ĐẾN KHI NÀO ❤️";
+
+  } else {
+
+    frame.src = "";
+
+    musicPlaying = false;
+
+    btn.textContent = "🎵 Bật nhạc của chúng ta";
+    status.textContent = "ĐẾN KHI NÀO • YouTube ❤️";
+
+  }
+}
 </script>
 
 </body>
